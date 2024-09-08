@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="fonts.css" />
+        <title>Калькулятор</title>
+    </head>
+    <body>
+        <div class="content">
+            <div class="tasks-wrapper high-priority-tasks">
+                <h1 class="header h1">High</h1>
+                <form class="tasks-form high-priority">
+                    <div class="control create-task">
+                        <input class="input create-task-input" type="text" placeholder="Добавить важных дел" />
+                        <button class="add-button high-priority" type="button"></button>
+                    </div>
+                </form>
+                <div class="tasks-list"></div>
+            </div>
+            <div class="tasks-wrapper low-priority-tasks">
+                <h1 class="header h1">Low</h1>
+                <form class="tasks-form low-priority">
+                    <div class="control create-task">
+                        <input class="input create-task-input" type="text" placeholder="Добавить неважных дел" />
+                        <button class="add-button low-priority" type="button"></button>
+                    </div>
+                </form>
+                <div class="tasks-list"></div>
+            </div>
+        </div>
+        <script type="module" src="script.js"></script>
+    </body>
+</html>

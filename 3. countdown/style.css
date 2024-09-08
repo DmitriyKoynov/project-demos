@@ -1,0 +1,17 @@
+body {
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.time-remaining_value {
+    font-weight: bold;
+    font-size: large;
+}

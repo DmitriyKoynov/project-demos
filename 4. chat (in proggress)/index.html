@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Чат</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="content">
+            <div class="header">
+                <button class="button button-text settings-button" id="settings">Настройки</button>
+                <div class="header-title">Чат</div>
+                <button class="button button-text exit-button" id="exit">Выйти</button>
+            </div>
+            <div class="chat-area">
+                <template class="client-message-template">
+                    <div class="message-container message-container--client">
+                        <div class="message message--client message--sending">
+                            <div class="message__sender"></div>
+                            <div class="message__text"></div>
+                            <div class="message__time"></div>
+                        </div>
+                    </div>
+                </template>
+                <template class="interlocutor-message-template">
+                    <div class="message-container message-container--interlocutor">
+                        <div class="message message--interlocutor message--sending">
+                            <div class="message__sender"></div>
+                            <div class="message__text"></div>
+                            <div class="message__time"></div>
+                        </div>
+                    </div>
+                </template>
+                <div class="message-container message-container--client">
+                    <div class="message message--client message--delivered">
+                        <div class="message__sender">Я</div>
+                        <div class="message__text">Добрый день!</div>
+                        <div class="message__time">2 сентября 2024, 15:04</div>
+                    </div>
+                </div>
+                <div class="message-container message-container--interlocutor">
+                    <div class="message message--interlocutor message--delivered">
+                        <div class="message__sender">Собеседник</div>
+                        <div class="message__text">
+                            А это второе и, кажется, оно очень длинное, чтобы поместиться на одной строке
+                        </div>
+                        <div class="message__time">3 сентября 2024, 09:14</div>
+                    </div>
+                </div>
+
+                <div class="message-container message-container--client">
+                    <div class="message message--client message--sending">
+                        <div class="message__sender">Я</div>
+                        <div class="message__text">И еще раз добрый день, который еще не дошел!</div>
+                        <div class="message__time">6 сентября 2024, 22:32</div>
+                    </div>
+                </div>
+            </div>
+            <form class="input-message-form">
+                <div class="input-message-container">
+                    <input class="input input-message-form__input" type="text" placeholder="Текст" />
+                    <button class="button button-icon input-message-form__submit">></button>
+                </div>
+            </form>
+        </div>
+
+        <div class="modal-shade hidden"></div>
+
+        <div id="modal" class="modal settings-modal hidden">
+            <div class="modal__closeButton">✖</div>
+            <div class="modal__title">Настройки</div>
+            <form class="modal__form settings-modal__form">
+                <div class="setting-container name-setting">
+                    <div class="setting__title name-setting__title">Имя в чате</div>
+                    <div class="setting__input-with-button-container">
+                        <input class="input setting-input name-setting__input" type="text" placeholder="Имя" required />
+                    </div>
+                </div>
+                <button class="button button-text modal__submit-button settings-form__submit" type="submit">
+                    Сохранить
+                </button>
+            </form>
+        </div>
+        <script src="script.js" type="module"></script>
+    </body>
+</html>
